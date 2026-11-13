@@ -1,0 +1,24 @@
+{
+ "problem": "D1",
+ "pipeline": "monolith",
+ "run": 1,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-11-12T20:04:09",
+ "answer": {
+  "status": "multiple",
+  "solution": {
+   "Alla": "knave",
+   "Bohdan": "knight",
+   "Vitalii": "knight",
+   "Hanna": "knight",
+   "Dariia": "knight"
+  },
+  "objective": null
+ },
+ "trace": {
+  "reasoning": "Let's analyze the statements one by one and see if we can determine the truth-tellers and liars. We'll check each possibility and see if it satisfies all conditions. We'll start by assuming each person is a knight and see if the statements hold true. If not, we'll try the opposite (knaves). We'll continue this process until we find a consistent solution or determine that no solution exists."
+ },
+ "error": null,
+ "seconds": 2.5,
+ "llm_calls": 1
+}

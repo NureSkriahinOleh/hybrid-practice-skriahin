@@ -1,0 +1,13 @@
+{
+ "problem": "D2",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-11-12T20:04:29",
+ "answer": null,
+ "trace": null,
+ "error": "HybridError: invalid IR after one retry: all_different[1] = ['Yurii'] has fewer than two variables; remove this group.; all_different[2] = ['PersonWithRedDoor'] has fewer than two variables; remove this group.; all_different[3] = ['PersonWithYellowDoor'] has fewer than two variables; remove this group.; all_different[4] = ['PersonWithCat'] has fewer than two variables; remove this group.; all_different[5] = ['PersonWithTurtle'] has fewer than two variables; remove this group.; all_different[6] = ['PersonWithBlueDoor'] has fewer than two variables; remove this group.",
+ "traceback": "Traceback (most recent call last):\n  File \"E:\\Program\\8_semester\\TRSHI\\hybrid-practice\\src\\run.py\", line 41, in run_one\n    out = PIPELINES[name].solve(problem)\n  File \"E:\\Program\\8_semester\\TRSHI\\hybrid-practice\\src\\hybrid.py\", line 397, in solve\n    raise HybridError(\n        \"invalid IR after one retry: \" + \"; \".join(errors)\n    )\nhybrid.HybridError: invalid IR after one retry: all_different[1] = ['Yurii'] has fewer than two variables; remove this group.; all_different[2] = ['PersonWithRedDoor'] has fewer than two variables; remove this group.; all_different[3] = ['PersonWithYellowDoor'] has fewer than two variables; remove this group.; all_different[4] = ['PersonWithCat'] has fewer than two variables; remove this group.; all_different[5] = ['PersonWithTurtle'] has fewer than two variables; remove this group.; all_different[6] = ['PersonWithBlueDoor'] has fewer than two variables; remove this group.\n",
+ "seconds": 3.0,
+ "llm_calls": 2
+}

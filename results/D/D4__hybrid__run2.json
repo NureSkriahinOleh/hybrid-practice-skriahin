@@ -1,0 +1,72 @@
+{
+ "problem": "D4",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-11-12T20:04:56",
+ "answer": {
+  "status": "multiple",
+  "solution": {
+   "Dictionary": 2,
+   "Atlas": 1,
+   "Novel": 3,
+   "Cookbook": 4
+  },
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "Dictionary": [
+       1,
+       4
+      ],
+      "Atlas": [
+       1,
+       4
+      ],
+      "Novel": [
+       1,
+       4
+      ],
+      "Cookbook": [
+       1,
+       4
+      ]
+     },
+     "all_different": [
+      [
+       "Dictionary",
+       "Atlas",
+       "Novel",
+       "Cookbook"
+      ]
+     ],
+     "constraints": [
+      "Atlas == 1 or Atlas == 4",
+      "Dictionary + 1 == Novel",
+      "Atlas != Dictionary + 1",
+      "Atlas <= Novel"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "multiple",
+   "n_solutions": 2,
+   "objective": null,
+   "first_solution": {
+    "Dictionary": 2,
+    "Atlas": 1,
+    "Novel": 3,
+    "Cookbook": 4
+   }
+  }
+ },
+ "error": null,
+ "seconds": 1.1,
+ "llm_calls": 2
+}

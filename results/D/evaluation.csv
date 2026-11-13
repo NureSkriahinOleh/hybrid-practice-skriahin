@@ -1,0 +1,21 @@
+problem,title,pipeline,run,correct,status,expected_status,match_pct,llm_calls,seconds,reason
+D1,Knights and knaves (5),hybrid,1,True,unique,unique,100,1,1.1,
+D1,Knights and knaves (5),hybrid,2,True,unique,unique,100,1,0.9,
+D1,Knights and knaves (5),monolith,1,False,multiple,unique,40,1,2.5,"status multiple, expected unique"
+D1,Knights and knaves (5),monolith,2,False,multiple,unique,40,1,0.9,"status multiple, expected unique"
+D2,Four houses,hybrid,1,False,,unique,,2,3.0,ERROR: HybridError: invalid IR after one retry: all_different[1] = ['Yurii'] has fewer than two variables; remove this group.; 
+D2,Four houses,hybrid,2,False,,unique,,2,3.0,ERROR: HybridError: invalid IR after one retry: all_different[1] = ['Yurii'] has fewer than two variables; remove this group.; 
+D2,Four houses,monolith,1,False,unique,unique,33,1,2.3,solution differs (33% of values correct)
+D2,Four houses,monolith,2,False,,unique,,1,9.2,ERROR: LLMError: the model hit the 2048-token limit before finishing its answer (it may be looping; see raw_model_output)
+D3,Parking lot,hybrid,1,False,,unique,,1,9.6,ERROR: LLMError: the model hit the 2048-token limit before finishing its answer (it may be looping; see raw_model_output)
+D3,Parking lot,hybrid,2,False,,unique,,1,9.5,ERROR: LLMError: the model hit the 2048-token limit before finishing its answer (it may be looping; see raw_model_output)
+D3,Parking lot,monolith,1,False,multiple,unique,0,1,0.5,"status multiple, expected unique"
+D3,Parking lot,monolith,2,False,multiple,unique,0,1,0.4,"status multiple, expected unique"
+D4,Bookshelf,hybrid,1,False,multiple,unique,25,2,1.1,"status multiple, expected unique"
+D4,Bookshelf,hybrid,2,False,multiple,unique,100,2,1.1,"status multiple, expected unique"
+D4,Bookshelf,monolith,1,False,unique,unique,25,1,1.4,solution differs (25% of values correct)
+D4,Bookshelf,monolith,2,False,multiple,unique,0,1,1.7,"status multiple, expected unique"
+D5,Class photo,hybrid,1,False,multiple,unique,67,2,1.6,"status multiple, expected unique"
+D5,Class photo,hybrid,2,False,multiple,unique,67,2,1.6,"status multiple, expected unique"
+D5,Class photo,monolith,1,False,unique,unique,17,1,1.6,solution differs (17% of values correct)
+D5,Class photo,monolith,2,False,unique,unique,33,1,2.2,solution differs (33% of values correct)
